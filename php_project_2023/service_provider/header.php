@@ -203,11 +203,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Product</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Services</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="add_product" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Product</a></li>
+                            <li><a href="add_product" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add service</a></li>
                             
-                            <li><a href="manage_product" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Product</a></li>		
+                            <li><a href="manage_product" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage service</a></li>		
 					   </ul>
                     </li>
 					

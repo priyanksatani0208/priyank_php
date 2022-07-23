@@ -281,8 +281,7 @@ include_once('header.php');
 							</div>
 							
 							<script>
-			
-			$(document).on('ready', function() {
+							$(document).on('ready', function() {
 								$("#input-1").fileinput({showCaption: false});
 							});
 							</script>
