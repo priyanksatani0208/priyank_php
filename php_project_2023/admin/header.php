@@ -212,18 +212,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
 					
 					<li>
-                        <a href="manage_customer.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Customer</span> </a>
+                        <a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Customer</span> </a>
                     </li>
 
                     <li>
-                        <a href="manage_payment.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
+                        <a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
                     </li>
 
 					 <li>
-                        <a href="manage_contact.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
+                        <a href="manage_contact" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
                     </li>
 					 <li>
-                        <a href="manage_feedback.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
+                        <a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
                     </li>
 					
                     
