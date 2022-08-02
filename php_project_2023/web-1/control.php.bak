@@ -37,11 +37,11 @@ class control extends model
 				$res=$this->insert('contact',$arr);
 				if($res)
 				{
-					echo "<script> alert('send contact') </script>";				
+					echo "<script> alert('Register Success') </script>";				
 				}
 				else
 				{
-					echo "";
+					echo "Not success";
 				}
 				
 				

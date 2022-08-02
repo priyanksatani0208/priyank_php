@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage customer</span>
+				<span>Manage Customer</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -15,60 +15,51 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
-				<div class="container">
-				  <h2>Manage customer</h2>
-
+				<div class="container mt-3">
+				  <h2>Manage Customer</h2>
+           <div class="table table-responsive">
 				  <table class="table">
 					<thead>
+					
 					  <tr>
+						<th>Contact Id</th>
 						<th>Name</th>
-						<th>Adress</th>
 						<th>Email</th>
 						<th>Mobile Number</th>
-						<th>Pincode</th>
+						<th>Password</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($manage_customer_arr as $c)
+					{
+					?>
 					  <tr>
-						<td>raj j patel</td>
-						<td>maninager ,Ahmedabad</td>
-						<td>raj123@gmail.com</td>	
-						<td>7579864251<td>
-						<td>457689</td>
+						<td><?php echo $c -> cust_id; ?></td>
+						<td><?php echo $c -> cust_name; ?></td>
+						<td><?php echo $c -> cust_email; ?></td>
+						<td><?php echo $c -> cust_mob_num; ?></td>	
+						<td><?php echo $c -> cust_password; ?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
 
-					  <tr>
-						<td>raj j patel</td>
-						<td>maninager ,Ahmedabad</td>
-						<td>raj123@gmail.com</td>	
-						<td>7579864251<td>
-						<td>457689</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					 
 
-					 <tr>
-						<td>raj j patel</td>
-						<td>maninager ,Ahmedabad</td>
-						<td>raj123@gmail.com</td>	
-						<td>7579864251<td>
-						<td>457689</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
-
-
+					 
+                    <?php
+					}
+					?>
 					  
 					</tbody>
 				  </table>
 				</div>
 				
+			</div>
 	        </div>
 	</div>
 	

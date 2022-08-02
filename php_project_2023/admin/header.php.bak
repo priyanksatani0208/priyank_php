@@ -204,26 +204,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                    
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Services</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="add_service_provider" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Service Provider</a></li>
+                       
+                            <li><a href="serviceprovider" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Service Provider</a></li>
                             
-                            <li><a href="manage_provider.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage provider</a></li>		
-					   </ul>
+                            <li><a href="manage_provider" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage provider</a></li>		
+					   
                     </li>
 					
 					<li>
-                        <a href="manage_customer.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Customer</span> </a>
+                        <a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Customer</span> </a>
                     </li>
 
                     <li>
-                        <a href="manage_payment.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
+                        <a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
                     </li>
 
 					 <li>
-                        <a href="manage_contact.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
+                        <a href="manage_contact" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
                     </li>
 					 <li>
-                        <a href="manage_feedback.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
+                        <a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
                     </li>
 					
                     

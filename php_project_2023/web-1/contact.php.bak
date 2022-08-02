@@ -61,15 +61,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<form action="" method="post" class="f-color">
 							<div class="form-group">
 								<label for="contactusername">Name</label>
-								<input type="text" class="form-control" id="contactusername" required name="contact_name">
+								<input type="text" class="form-control" id="contactusername" required name="name">
 							</div>
 							<div class="form-group">
 								<label for="contactemail">Email</label>
-								<input type="email" class="form-control" id="contactemail" required name="contact_email">
+								<input type="email" class="form-control" id="contactemail" required name="email">
 							</div>
 							<div class="form-group">
 								<label for="contactcomment">Your Message</label>
-								<textarea class="form-control" rows="5" id="contactcomment" required name="contact_message"></textarea>
+								<textarea class="form-control" rows="5" id="contactcomment" required name="message"></textarea>
 							</div>
 							<button type="submit" class="btn btn-info btn-block" name="submit">Submit</button>
 						</form>

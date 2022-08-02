@@ -1,9 +1,12 @@
 <?php
-  
-  class control
+ include_once('model.php'); 
+ 
+  class control extends model
   {
+	  
 	  function __construct()
 	  {
+		  model::__construct();
 		  $path=$_SERVER['PATH_INFO'];
 		  
 		  switch($path)
@@ -13,10 +16,12 @@
 			  break;
 			  
 			  case '/manage_contact':
+			  $manage_contact_arr=$this->selectall('contact');
 			  include_once('manage_contact.php');
 			  break;
 			  
 			  case '/manage_customer':
+			  $manage_customer_arr=$this->selectall('customer');
 			  include_once('manage_customer.php');
 			  break;
 			  

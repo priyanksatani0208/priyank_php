@@ -13,13 +13,13 @@ body{
 	align-items: center;
 	flex-direction:column;
 	height: 100vh;
-	background: url('/images/singup.png');
+	background: url('singup.png');
 	background-size: cover;
 	
 }
 
 form{
-	margin-top: 150px;
+	margin-top: 50px;
 	text-align: center;
 	
 }

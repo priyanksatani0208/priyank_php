@@ -309,7 +309,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                      
                      <textarea name="Message" placeholder="contact_message" required=""></textarea>
 					 
-                     <input type="submit" value="SUBMIT" name="submit">
+                     <input type="submit" value="SUBMIT">
                   </div>
                </form>
             </div>

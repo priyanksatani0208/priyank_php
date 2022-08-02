@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="signup.css">
 </head>
 <body>
+    
     <form>
         <h1>Sing Up</h1>
         <input type="text" name="fname" placeholder="Full Name">
