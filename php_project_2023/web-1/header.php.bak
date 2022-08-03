@@ -27,7 +27,9 @@
         <a href="#" class="nav-link" data-toggle="modal" data-target="#myModal">Login</a>
         </li>&nbsp;
 		
-	 	
+	  <li class="w3">
+        <a href="#" class="nav-link" data-toggle="modal" data-target="#myModal">Sing up</a>
+        </li>	
 
     </ul>
  

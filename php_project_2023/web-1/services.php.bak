@@ -205,16 +205,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                <form action="#" method="post">
                   <div class="row contact-bothside-agileinfo">
                      <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">
-                        <input type="text" name="contact_name" placeholder="Name" required="">
+                        <input type="text" name="Name" placeholder="Name" required="">
                      </div>
-               
+                     <div class="col-md-6 col-sm-6 col-xs-6 form-right ">
+                        <input type="text" name="Last name" placeholder="Last name" required="">
+                     </div>
                      <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">
-                        <input type="email" name="contact_email" placeholder="Email" required="">
+                        <input type="email" name="Email" placeholder="Email" required="">
                      </div>
-                     
-                     <textarea name="contact_message" placeholder="Message" required=""></textarea>
-					 
-                     <input type="submit" value="SUBMIT" name="submit">
+                     <div class="col-md-6 col-sm-6 col-xs-6 form-right ">
+                        <input type="text" name="phone" placeholder="Phone" required="">
+                     </div>
+                     <textarea name="Message" placeholder="Message" required=""></textarea>
+                     <input type="submit" value="SUBMIT">
                   </div>
                </form>
             </div>

@@ -37,8 +37,8 @@
 			  include_once('manage_product.php');
 			  break;
 			  
-			  case '/add_product':
-			  include_once('add_product.php');
+			  case '/add_service':
+			  include_once('add_service.php');
 			  break;
  
 			  case '/profile':

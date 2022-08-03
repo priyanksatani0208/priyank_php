@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" >
 				
 				<div class="container mt-3">
 				  <h2>Manage Feedback</h2>
