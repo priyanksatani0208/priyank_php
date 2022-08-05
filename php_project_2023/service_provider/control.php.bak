@@ -38,7 +38,7 @@
 				else
 				{
 					echo "<script> 
-						alert('Login Failed due wrong credebntial') ;
+						alert('Login Failed due wrong credebntial') 
 						window.location='index';
 						</script>";
 				}

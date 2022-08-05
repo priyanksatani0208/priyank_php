@@ -346,7 +346,7 @@ include_once('footer.php');
                             <div class="module form-module">
                                 <div class="toggle">
                                     <i class="fa fa-times fa-pencil"></i>
-                                    <div class="tooltip">Register</div>
+                                    <div class="tooltip">SignUp</div>
                                 </div>
                                 <div class="form">
                                     <h3>Login to your account</h3>

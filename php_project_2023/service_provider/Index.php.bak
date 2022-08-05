@@ -21,7 +21,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h1><a href="index">Admin Login  </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
-			<form method="post">
+			<form>
 			<div class="col-md-12">
 				<div class="login-mail">
 					<input type="text" placeholder="Email" required="" name="sp_email">

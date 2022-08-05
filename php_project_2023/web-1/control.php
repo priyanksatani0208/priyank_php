@@ -106,8 +106,6 @@ class control extends model
 				{
 					echo "";
 				}
-				
-				
 			}
 			
 				include_once('contact.php');

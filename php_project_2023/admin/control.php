@@ -45,7 +45,7 @@
 				$password=$_REQUEST['password'];
 				$password=md5($password);
 				
-				$arr=array("sp_name"=>$sp_name,"sp_email"=>$sp_email,"sp_mob_num"=>$sp_mob_num,"sp_address"=>$sp_address,"sp_gender"=>$sp_gender);
+				 $arr=array("sp_name"=>$sp_name,"sp_email"=>$sp_email,"sp_mob_num"=>$sp_mob_num,"sp_address"=>$sp_address,"sp_gender"=>$sp_gender,"password"=>$password);
 				
 				$res=$this->insert('serviceprovider',$arr);
 				if($res)
