@@ -5,6 +5,7 @@
   	
   	function __construct()
   	{
+		session_start();
 		model::__construct();
 		
   		$path=$_SERVER['PATH_INFO'];
@@ -12,9 +13,46 @@
   		switch ($path)
   		 {
   			case '/index':
-  			include_once('index.php');	
+				if(isset($_REQUEST['submit']))
+				{
+					$email=$_REQUEST['email'];
+					$password=$_REQUEST['password'];
+					$pass=md5($password);
+					
+					$where=array("email"=>$email,"password"=>$pass);
+					$run=$this->select_where('admin',$where);
+					
+					$res=$run->num_rows; // check cond by rows
+					if($res==1) // 1 means true
+					{
+						$_SESSION['admin']=$username;
+						
+						echo "<script> 
+							alert('Login Success') 
+							window.location='dashboard';
+							</script>";
+						
+					}
+					else
+					{
+						echo "<script> 
+							alert('Login Failed due wrong credebntial') 
+							window.location='index';
+							</script>";
+					}
+				}
+			include_once('index.php');	
   			break;
-  			
+  	    
+			  case '/admin_logout':
+				unset($_SESSION['admin']);
+				echo "<script> 
+					alert('Logout Success'); 
+					window.location='index';
+					</script>";
+				
+				break;
+				
   			case '/dashboard':
   			include_once('dashboard.php');
   			break;
