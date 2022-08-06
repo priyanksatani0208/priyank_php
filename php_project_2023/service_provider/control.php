@@ -14,35 +14,6 @@
 		  switch($path)
 		  {
 			  case '/index':
-			  if(isset($_REQUEST['submit']))
-			{
-				$sp_email=$_REQUEST['sp_email'];
-				$password=$_REQUEST['password'];
-				$password=md5($password);
-				
-				$where=array("sp_email"=>$email,"password"=>$password);
-				$run=$this->select_where('serviceprovider',$where);
-				
-				$res=$run->num_rows; // check cond by rows
-				if($res==1) // 1 means true
-				{
-					
-					$_SESSION['email']=$email;
-					
-					echo "<script> 
-						alert('Login Success') 
-						window.location='dashboard';
-						</script>";
-					
-				}
-				else
-				{
-					echo "<script> 
-						alert('Login Failed due wrong credebntial') ;
-						window.location='index';
-						</script>";
-				}
-			}
 			  include_once('index.php');
 			  break;
 			  
