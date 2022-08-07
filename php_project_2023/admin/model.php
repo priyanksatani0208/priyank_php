@@ -5,7 +5,7 @@ class model
 	public $conn="";
 	function __construct()
 	{
-		$this->conn=new mysqli('localhost','root','','rmc');
+		$this->conn=new mysqli('localhost','root','','msp');
 	}
 	
 	function insert($tbl,$arr)

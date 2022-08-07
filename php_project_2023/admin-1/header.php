@@ -1,7 +1,28 @@
+
+<?php
+
+if(isset($_SESSION['admin']))
+{
+	
+}
+else
+{
+	echo "<script>
+	window.location='index';
+	</script>";
+}
+?>
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title></title>
+<title>Taxas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -88,14 +109,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!----->
         <nav class="navbar-default navbar-static-top" role="navigation">
-             <div class="navbar-header.php">
+             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="dashboard.php">MSP</a></h1>         
+               <h1> <a class="navbar-brand" href="dashboard">Taxas</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -181,10 +202,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
-		                <li><a href="profile.php.html"><i class="fa fa-user"></i>Edit profile.php</a></li>
-		                <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
-		                <li><a href="calendar.html"><i class="fa fa-calendar"></i>Calender</a></li>
-		                <li><a href="inbox.html"><i class="fa fa-clipboard"></i>Tasks</a></li>
+		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
+		                <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li>
+		                <li><a href="calendar"><i class="fa fa-calendar"></i>Calender</a></li>
+		                <li><a href="inbox"><i class="fa fa-clipboard"></i>Tasks</a></li>
 		              </ul>
 		            </li>
 		           
@@ -199,33 +220,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="dashboard.php" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboard</span> </a>
+                        <a href="dashboard" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Admin Dashboards</span> </a>
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Services</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="serviceprovider" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Service Provider</a></li>
+                            <li><a href="add_emp" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Employee</a></li>
                             
-                            <li><a href="manage_provider" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage provider</a></li>		
+                            <li><a href="manage_emp" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Emplyee</a></li>		
 					   </ul>
                     </li>
 					
-					<li>
-                        <a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Customer</span> </a>
+					 <li>
+                        <a href="manage_user" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage User</span> </a>
                     </li>
-
-                    <li>
-                        <a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
-                    </li>
-
 					 <li>
                         <a href="manage_contact" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
                     </li>
 					 <li>
                         <a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
                     </li>
-					
+					 <li>
+                        <a href="admin_logout" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Logout</span> </a>
+                    </li>
                     
                     
                 </ul>
