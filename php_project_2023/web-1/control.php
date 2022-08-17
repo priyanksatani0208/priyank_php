@@ -6,6 +6,7 @@ class control extends model
 	
 	function __construct()
 	{
+		
 		model:: __construct();
 		
 		$path=$_SERVER['PATH_INFO'];
@@ -110,6 +111,63 @@ class control extends model
 			
 				include_once('contact.php');
 				break;
+				
+			case '/signup':
+			if(isset($_REQUEST['submit']))
+			{
+				$cust_name=$_REQUEST['cust_name'];
+				$cust_email=$_REQUEST['cust_email'];
+				$cust_mob_num=$_REQUEST['cust_mob_num'];
+				$password=$_REQUEST['password'];
+                $password=md5($password);				
+				
+				$arr=array("cust_name"=>$cust_name,"cust_email"=>$cust_email,"cust_mob_num"=>$cust_mob_num,"password"=>$password);
+				
+				$res=$this->insert('customer',$arr);
+				if($res)
+				{
+					echo "<script> 
+					alert('sucessfully Register...')
+					window.location='login';
+					</script>";				
+				}
+				else
+				{
+					echo "";
+				}
+			}
+				include_once('signup.php');
+				break;
+		       
+			   
+			case '/login':
+			if(isset($_REQUEST['submit']))
+				{
+					$cust_email=$_REQUEST['cust_email'];
+					$password=$_REQUEST['password'];
+				    $password=md5($password);
+					
+					$where=array("cust_email"=>$cust_email,"password"=>$password);
+					$run=$this->select_where('customer',$where);
+					
+					$res=$run->num_rows;   // check cond by rows
+					if($res==1)           // 1 means true
+					{
+						
+						
+						echo "<script> 
+							alert('Login Success') 
+							window.location='home';
+							</script>";
+						
+					}
+					else
+					{
+						echo "Login Failed due wrong credebntial";
+					}
+				}
+            include_once('login.php');
+            break;			
 		
 			default:
 				include_once('error.php');

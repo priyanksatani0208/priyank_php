@@ -46,7 +46,7 @@ include_once('header.php');
 						<td><?php echo $c -> sp_address; ?></td>
 						<td><?php echo $c -> sp_gender; ?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delete?del_sp_id=<?php echo $c -> sp_id; ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php
 					}

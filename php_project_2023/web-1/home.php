@@ -385,7 +385,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 include_once('footer.php');
 ?>
     <!-- bootstrap-pop-up for login and register -->
-    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <!--<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -430,7 +430,7 @@ include_once('footer.php');
                 </section>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- //bootstrap-pop-up for login and register-->
 
 <script  src="js/jquery.min.v3.js"></script>
@@ -617,7 +617,7 @@ setInterval(changeWord, 4000);
 </script>
 <!-- //skills -->
    <!-- sign in and signup pop up toggle script -->
-    <script>
+   <!-- <script>
         $('.toggle').click(function () {
             // Switches the Icon
             $(this).children('i').toggleClass('fa-pencil');
@@ -629,7 +629,7 @@ setInterval(changeWord, 4000);
                 opacity: "toggle"
             }, "slow");
         });
-    </script>
+    </script>-->
     <!-- sign in and signup pop up toggle script -->
 	<script type="text/javascript">
 	var slideIndex = 1;

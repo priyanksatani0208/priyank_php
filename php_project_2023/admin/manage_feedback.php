@@ -15,37 +15,40 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto;>
 				
 				<div class="container mt-3">
 				  <h2>Manage Feedback</h2>
-
+             <div class="table table-responsive">
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>Feedback description</th>
+					    <th>Feedback id</th>
+						<th>Customer name</th>
+						<th>Customer mobile No</th>
+						<th>Customer email</th>
+						<th>Customer message</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					 foreach($manage_feedback_arr as $c)
+					 {
+				    ?>
 					  <tr>
-						<td>Website service is good. </td>
+						<td><?php echo $c -> feedback_id ;?> </td>
+					    <td><?php echo $c -> cust_name ;?> </td>
+						<td><?php echo $c -> cust_mob_num ;?> </td>
+						<td><?php echo $c -> cust_email ;?> </td>
+						<td><?php echo $c -> cust_message ;?> </td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delete?del_feedback_id=<?php echo $c -> feedback_id ;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
-
-					   <tr>
-						<td>Website service is best . </td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
-
-					   <tr>
-						<td>Website service is good. </td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+                    <?php
+					 }
+					?>
 					  
 					</tbody>
 				  </table>
@@ -56,5 +59,5 @@ include_once('header.php');
 	
 	<!--//faq-->
 	<?php
-include_once('footer.php');
+     include_once('footer.php');
 ?>

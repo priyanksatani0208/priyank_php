@@ -10,7 +10,7 @@ class model
 	
 	function insert($tbl,$arr)
 	{
-		$key_arr=array_keys($arr); // 
+		$key_arr=array_keys($arr); 
 		$key=implode(",",$key_arr);
 		
 		$value_arr=array_values($arr);
@@ -47,7 +47,23 @@ class model
 		$i=0;
 		foreach($where as $w)
 		{
-			echo $sel.=" and $key_arr[$i]='$value_arr[$i]'";
+		    $sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+		}
+		$run=$this->conn->query($sel);
+		return $run;
+		
+	}
+	function delete_where($tbl,$where)
+	{
+		$key_arr=array_keys($where); // 
+		$value_arr=array_values($where);
+		
+		$sel="delete from $tbl where 1=1"; // query continue
+		$i=0;
+		foreach($where as $w)
+		{
+		    $sel.=" and $key_arr[$i]='$value_arr[$i]'";
 			$i++;
 		}
 		$run=$this->conn->query($sel);

@@ -1,31 +1,32 @@
 <?php
   include_once('model.php');
+
   class control extends model
   {
   	
   	function __construct()
   	{
-		session_start();
-		model::__construct();
+	   	session_start();
+		  model::__construct();
 		
   		$path=$_SERVER['PATH_INFO'];
 
   		switch ($path)
-  		 {
+  		{   
   			case '/index':
 				if(isset($_REQUEST['submit']))
 				{
-					$email=$_REQUEST['email'];
+					$admin_email=$_REQUEST['admin_email'];
 					$password=$_REQUEST['password'];
-					$pass=md5($password);
+					$password=md5($password);
 					
-					$where=array("email"=>$email,"password"=>$pass);
+					$where=array("admin_email"=>$admin_email,"password"=>$password);
 					$run=$this->select_where('admin',$where);
 					
 					$res=$run->num_rows; // check cond by rows
 					if($res==1) // 1 means true
 					{
-						$_SESSION['admin']=$username;
+						$_SESSION['email']=$admin_email;
 						
 						echo "<script> 
 							alert('Login Success') 
@@ -44,14 +45,14 @@
 			include_once('index.php');	
   			break;
   	    
-			  case '/admin_logout':
-				unset($_SESSION['admin']);
+		    case '/admin_logout':
+		 	unset($_SESSION['email']);
 				echo "<script> 
 					alert('Logout Success'); 
 					window.location='index';
 					</script>";
 				
-				break;
+			break;
 				
   			case '/dashboard':
   			include_once('dashboard.php');
@@ -63,6 +64,7 @@
   			break;
   			
   			case '/manage_feedback':
+			$manage_feedback_arr=$this->selectall('feedback');
   			include_once('manage_feedback.php');	
   			break;
   			
@@ -100,13 +102,81 @@
   			break;
 			
 			case '/manage_customer':
+			$manage_customer_arr=$this->selectall('customer');
   			include_once('manage_customer.php');	
   			break;
 			
 			case '/manage_payment':
+			$manage_payment_arr=$this->selectall('payment');
   			include_once('manage_payment.php');	
   			break;
-		
+			
+			 case '/delete':
+			if(isset($_REQUEST['del_sp_id']))
+			{
+				$sp_id=$_REQUEST['del_sp_id'];
+				$where=array("sp_id"=>$sp_id);
+				$res=$this->delete_where('serviceprovider',$where);
+				if($res) // 1 means true
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_provider';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_payment_id']))
+			{
+				$payment_id=$_REQUEST['del_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$res=$this->delete_where('payment',$where);
+				if($res) // 1 means true
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_payment';
+						</script>";
+				}
+			}
+		    if(isset($_REQUEST['del_feedback_id']))
+			{
+				$feedback_id=$_REQUEST['del_feedback_id'];
+				$where=array("feedback_id"=>$feedback_id);
+				$res=$this->delete_where('feedback',$where);
+				if($res) // 1 means true
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_feedback';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_contact_id']))
+			{
+				$contact_id=$_REQUEST['del_contact_id'];
+				$where=array("contact_id"=>$contact_id);
+				$res=$this->delete_where('contact',$where);
+				if($res) // 1 means true
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_contact';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cust_id']))
+			{
+				$cust_id=$_REQUEST['del_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$res=$this->delete_where('customer',$where);
+				if($res) // 1 means true
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_customer';
+						</script>";
+				}
+			}
   			
   			default:
   				include_once('404.php');

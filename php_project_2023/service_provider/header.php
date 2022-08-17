@@ -1,3 +1,17 @@
+
+<?php
+
+if(isset($_SESSION['email']))
+{
+	
+}
+else
+{
+	echo "<script>
+	window.location='index';
+	</script>";
+}
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -207,7 +221,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="nav nav-second-level">
                             <li><a href="add_service" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add service</a></li>
                             
-                            <li><a href="manage_product" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage service</a></li>		
+                            <li><a href="manage_service" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage service</a></li>		
 					   </ul>
                     </li>
 					
@@ -225,7 +239,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 <li>
                         <a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
                     </li>
-					
+					 <li>
+                        <a href="sp_logout" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Logout</span> </a>
+                    </li>
                     
                     
                 </ul>

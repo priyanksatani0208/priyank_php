@@ -6,7 +6,7 @@ class model
 	{
 		$this->conn=new mysqli('localhost','root','','msp');
 	}
-	function insert($tbl,$arr)
+	function insert($tbl,$arr)     #form insert  ex.  signup, contact form
 	{
 		$key_arr=array_keys($arr);
 		$key=implode(",",$key_arr);
@@ -17,7 +17,7 @@ class model
 		return $run;
 	}
 	
-	function selectall($tbl)
+	function selectall($tbl)      #database etch(view) data   ex.manage_feedback
 	{
 		$ins="select * from $tbl ";
 		$run=$this->conn->query($ins);
@@ -35,7 +35,7 @@ class model
 		}
 	}
 	
-	function select_where($tbl,$where)
+	function select_where($tbl,$where)         #login function
 	{
 		$key_arr=array_keys($where);
 		$value_arr=array_values($where);
@@ -45,7 +45,7 @@ class model
 		
 		foreach($where as $w)
 		{
-			$sel.=" and $key_arr[i]='$value_arr[$i]'";
+		    $sel.=" and $key_arr[$i]='$value_arr[$i]'";
 			$i++;
 			
 		}
@@ -53,6 +53,26 @@ class model
 		return $run;
 		
 	}
+	
+	function delete_where($tbl,$where)    #pannel delete button  code function
+	{
+		$key_arr=array_keys($where);
+		$value_arr=array_values($where);
+		
+		$del="delete from $tbl where 1=1";
+		$i=0;
+		
+		foreach($where as $w)
+		{
+		    $del.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+			
+		}
+		$run=$this->conn->query($del);
+		return $run;
+		
+	}
+	
 }
 $obj=new model();
 ?>

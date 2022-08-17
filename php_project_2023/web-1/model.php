@@ -1,4 +1,4 @@
-<?php
+ <?php
 class model
 {
 	public $conn="";
@@ -6,7 +6,7 @@ class model
 	{
 		$this->conn=new mysqli('localhost','root','','msp');
 	}
-	function insert($tbl,$arr)
+	function insert($tbl,$arr)    #form insert
 	{
 		$key_arr=array_keys($arr);
 		$key=implode(",",$key_arr);
@@ -16,10 +16,10 @@ class model
 		$run=$this->conn->query($ins);
 		return $run;
 	}
-	function selectall($tbl)
+	function selectall($tbl)        #database fetch(view) data , signup,contact
 	{
        $ins="select * from $tbl";
-	   	$run=$this->conn->query($ins);
+	  	$run=$this->conn->query($ins);
 		while($fetch=$run->$fetch_object())
 		{
 			$arr[]=$fetch;
@@ -32,6 +32,25 @@ class model
 		{
 			return $arr=array("Data not Found");
 		}
+		
+	}
+	
+	function select_where($tbl,$where)         #login function
+	{
+		$key_arr=array_keys($where);
+		$value_arr=array_values($where);
+		
+		$sel="select * from $tbl where 1=1";
+		$i=0;
+		
+		foreach($where as $w)
+		{
+		    $sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+			
+		}
+		$run=$this->conn->query($sel);
+		return $run;
 		
 	}
 }

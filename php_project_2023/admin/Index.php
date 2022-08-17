@@ -1,10 +1,14 @@
 <?php
 
-if(isset($_SESSION['admin']))
+if(isset($_SESSION['email']))
 {
 	echo "<script>
 	window.location='dashboard';
 	</script>";
+}
+else
+{
+	
 }
 
 ?>
@@ -34,7 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<form method="post" > 
 			<div class="col-md-12">
 				<div class="login-mail">
-					<input type="text" placeholder="Email" required="" name="email">
+					<input type="text" placeholder="Email" required="" name="admin_email">
 					<i class="fa fa-envelope"></i>
 				</div>
 				<div class="login-mail">
@@ -49,8 +53,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="login-do">
 				<label class="hvr-shutter-in-horizontal login-sub">
-					<input type="submit" value="login" name="login">
-					</label>
+					<input type="submit" value="login" name="submit">
+				</label>
 			</div>
 			
 			<div class="clearfix"> </div>

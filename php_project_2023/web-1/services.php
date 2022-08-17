@@ -1,9 +1,4 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -237,7 +232,7 @@ include_once('footer.php');
 ?>
 <!-- /Footer-->
     <!-- bootstrap-pop-up for login and register -->
-    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+   <!-- <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -282,7 +277,7 @@ include_once('footer.php');
                 </section>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- //bootstrap-pop-up for login and register-->
 
 <script  src="js/jquery.min.v3.js"></script>
@@ -312,7 +307,7 @@ include_once('footer.php');
 				</script>
 
    <!-- sign in and signup pop up toggle script -->
-    <script>
+    <!--<script>
         $('.toggle').click(function () {
             // Switches the Icon
             $(this).children('i').toggleClass('fa-pencil');
@@ -324,7 +319,7 @@ include_once('footer.php');
                 opacity: "toggle"
             }, "slow");
         });
-    </script>
+    </script>-->
     <!-- sign in and signup pop up toggle script -->
 	
 <!-- start-smoth-scrolling -->

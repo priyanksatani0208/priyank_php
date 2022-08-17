@@ -331,7 +331,7 @@ include_once('footer.php');
 ?>
 <!-- /Footer-->
     <!-- bootstrap-pop-up for login and register -->
-    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+   <!--<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -376,7 +376,7 @@ include_once('footer.php');
                 </section>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- //bootstrap-pop-up for login and register-->
     
 
@@ -444,7 +444,7 @@ fit: true
 <!--team-->
 
    <!-- sign in and signup pop up toggle script -->
-    <script>
+  <!--  <script>
         $('.toggle').click(function () {
             // Switches the Icon
             $(this).children('i').toggleClass('fa-pencil');
@@ -456,7 +456,7 @@ fit: true
                 opacity: "toggle"
             }, "slow");
         });
-    </script>
+    </script>-->
     <!-- sign in and signup pop up toggle script -->
 	
 <!-- start-smoth-scrolling -->

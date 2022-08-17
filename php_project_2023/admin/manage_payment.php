@@ -15,34 +15,44 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage payment</h2>
-
+             <div class="table table-responsive">
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>Firstname</th>
-						<th>Lastname</th>
-						<th>Email</th>
+						<th>Payment_Id</th>
+						<th>Paument_type</th>
+						<th>Cust_id</th>
+						<th>Service_id</th>
+						<th>Booking_id</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
+					<?php
+					foreach($manage_payment_arr as $c)
+					{
+					?>
 					<tbody>
 					  <tr>
-						<td>John</td>
-						<td>Doe</td>
-						<td>john@example.com</td>
+						<td><?php echo $c->payment_id ;?></td>
+						<td><?php echo $c->payment_type ;?></td>
+						<td><?php echo $c->cust_id ;?></td>
+						<td><?php echo $c->service_id ;?></td>
+						<td><?php echo $c->booking_id ;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delete?del_payment_id=<?php echo $c -> payment_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  
+					 <?php
+					}
+                     ?>					
 					</tbody>
 				  </table>
 				</div>
-				
+				</div>
 	        </div>
 	</div>
 	

@@ -22,10 +22,11 @@
       <li class="nav-item">
         <a class="nav-link " href="contact">Contact</a>
       </li>
-
-       <li class="w3">
-        <a href="#" class="nav-link" data-toggle="modal" data-target="#myModal">Login</a>
-        </li>&nbsp;
+     
+	 <li class="w3">
+        <a class="nav-link " href="login">Login</a>
+      </li>
+      
 		
 	 	
 
