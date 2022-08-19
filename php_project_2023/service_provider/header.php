@@ -1,4 +1,3 @@
-
 <?php
 
 if(isset($_SESSION['email']))
@@ -195,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
-		                <li><a href="profile.html"><i class="fa fa-user"></i>Edit Profile</a></li>
+		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
 		                <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
 		                <li><a href="calendar.html"><i class="fa fa-calendar"></i>Calender</a></li>
 		                <li><a href="inbox.html"><i class="fa fa-clipboard"></i>Tasks</a></li>
@@ -213,7 +212,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="dashboard.php" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">service &nbsp;&nbsp; provider <center>Dashboard</center></span> </a>
+                        <a href="dashboard" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">service &nbsp;&nbsp; provider <center>Dashboard</center></span> </a>
                     </li>
                    
                     <li>
@@ -240,8 +239,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
                     </li>
 					 <li>
-                        <a href="sp_logout" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Logout</span> </a>
+                        <a href="serviceprovider_logout" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Logout</span> </a>
                     </li>
+					
                     
                     
                 </ul>

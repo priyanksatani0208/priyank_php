@@ -6,7 +6,7 @@ class control extends model
 	
 	function __construct()
 	{
-		
+		session_start();
 		model:: __construct();
 		
 		$path=$_SERVER['PATH_INFO'];
@@ -154,7 +154,7 @@ class control extends model
 					if($res==1)           // 1 means true
 					{
 						
-						
+						$_SESSION['email']=$sp_email;
 						echo "<script> 
 							alert('Login Success') 
 							window.location='home';
@@ -169,6 +169,13 @@ class control extends model
             include_once('login.php');
             break;			
 		
+		   case '/logout':
+			unset($_SESSION['email']);
+			echo "<script> 
+				alert('Logout Success'); 
+				window.location='home';
+				</script>";			
+			break;
 			default:
 				include_once('error.php');
 		}

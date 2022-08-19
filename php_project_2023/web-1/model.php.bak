@@ -53,8 +53,6 @@ class model
 		return $run;
 		
 	}
-	
-	
 }
 $obj=new model();
 ?>

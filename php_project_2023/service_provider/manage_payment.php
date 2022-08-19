@@ -19,36 +19,37 @@ include_once('header.php');
 				
 				<div class="container mt-3">
 				  <h2>Manage payment</h2>
-             <div class="table table-responsive">
+				 <div class="table table-responsive">
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>Payment_Id</th>
-						<th>Paument_type</th>
-						<th>Cust_id</th>
-						<th>Service_id</th>
-						<th>Booking_id</th>
+						<th>Payment Id</th>
+						<th>Payment Type</th>
+						<th>Cust Id</th>
+						<th>Service Id</th>
+						<th>Booking Id</th>	
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
+					<tbody>
 					<?php
 					foreach($manage_payment_arr as $c)
-					{
-					?>
-					<tbody>
+					{?>
 					  <tr>
-						<td><?php echo $c->payment_id ;?></td>
-						<td><?php echo $c->payment_type ;?></td>
-						<td><?php echo $c->cust_id ;?></td>
-						<td><?php echo $c->service_id ;?></td>
-						<td><?php echo $c->booking_id ;?></td>
+						<td><?php echo $c ->payment_id ;?></td>
+						<td><?php echo $c ->payment_type ;?></td>
+						<td><?php echo $c ->cust_id ;?></td>
+						<td><?php echo $c ->service_id ;?></td>
+						<td><?php echo $c ->booking_id ;?></td>
+						
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_payment_id=<?php echo $c ->payment_id?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="delete?del_payment_id=<?php echo $c->payment_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					 <?php
+					<?php
 					}
-                     ?>					
+					?>
+					  
 					</tbody>
 				  </table>
 				</div>
@@ -57,6 +58,6 @@ include_once('header.php');
 	</div>
 	
 	<!--//faq-->
-	<?php
+<?php
 include_once('footer.php');
 ?>

@@ -45,7 +45,7 @@ include_once('header.php');
 						<td><?php echo $c -> cust_mob_num; ?></td>	
 						<td><?php echo $c -> cust_password; ?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delete?del_cust_id=<?php echo $c->cust_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 
 					 

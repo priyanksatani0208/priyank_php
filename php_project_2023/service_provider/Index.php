@@ -31,13 +31,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<div class="login">
 		<h1><a href="index">MSP </a></h1>
-		<h1><a href="index">Service Provider Login  </a></h1>
+		<h1><a href="index">Admin Login  </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
-			<form method="post">
+			<form>
 			<div class="col-md-12">
 				<div class="login-mail">
-					<input type="email" placeholder="Email" required="" name="sp_email">
+					<input type="text" placeholder="Email" required="" name="sp_email">
 					<i class="fa fa-envelope"></i>
 				</div>
 				<div class="login-mail">

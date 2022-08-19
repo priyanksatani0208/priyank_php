@@ -384,54 +384,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <?php
 include_once('footer.php');
 ?>
-    <!-- bootstrap-pop-up for login and register -->
-    <!--<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    Fast Service
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <section>
-                    <div class="modal-body">
-                        <div class="loginf_module">
-                            <div class="module form-module">
-                                <div class="toggle">
-                                    <i class="fa fa-times fa-pencil"></i>
-                                    <div class="tooltip">SignUp</div>
-                                </div>
-                                <div class="form">
-                                    <h3>Login to your account</h3>
-                                    <form action="#" method="post">
-                                        <input type="text" name="Username" placeholder="Username" required="">
-                                        <input type="password" name="Password" placeholder="Password" required="">
-                                        <input type="submit" value="Login">
-                                    </form>
-                                    <div class="cta">
-                                        <a href="#">Forgot password?</a>
-                                    </div>
-                                </div>
-                                <div class="form">
-                                    <h3>Create a new account</h3>
-                                    <form action="#" method="post">
-                                        <input type="text" name="Username" placeholder="Username" required="">
-                                        <input type="password" name="Password" placeholder="Password" required="">
-                                        <input type="email" name="Email" placeholder="Email address" required="">
-                                        <input type="text" name="Phone" placeholder="Phone Number" required="">
-                                        <input type="submit" value="Register">
-                                    </form>
-                                </div>
+    
 
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>-->
-    <!-- //bootstrap-pop-up for login and register-->
 
 <script  src="js/jquery.min.v3.js"></script>
 <script  src="js/bootstrap.min.js"></script>
