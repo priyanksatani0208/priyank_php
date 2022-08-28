@@ -2,7 +2,7 @@
 	<div class="header-w3l">
 	
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="index.html">Mobile Service Provider</a>
+  <a class="navbar-brand" href="index.html">Mobile Services </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,16 +22,37 @@
       <li class="nav-item">
         <a class="nav-link " href="contact">Contact</a>
       </li>
-     
-	 <li class="w3">
-        <a class="nav-link " href="login">Login</a>
-      </li>
-      
-		
-	 	
+	  
+	  <?php
+					if(isset($_SESSION['email']))
+					{
+					?>
+					
+					  <li class="">
+							<a class="nav-link " href="myprofile">Profile</a>
+					  </li>&nbsp;&nbsp;
+					  <li class="w3">
+                           <a class="nav-link " href="logout">Logout</a>
+                       </li>
+					<?php
+					}
+					else
+					{
+					?>	
+					  <li class="w3">
+                         <a class="nav-link " href="login">Login</a>
+                       </li>
+						  
+					<?php
+					}
+					?>	 	
 
     </ul>
- 
+  
+  
+					
+					</div>
+					
 </nav>
 
 	<!-- //header -->

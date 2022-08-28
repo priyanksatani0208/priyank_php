@@ -177,7 +177,48 @@
 						</script>";
 				}
 			}
-  			
+			case '/profile';
+			include_once('profile.php');
+			break;
+  
+            case '/status':			
+			if(isset($_REQUEST['status_sp_id']))
+			{
+				$sp_id=$_REQUEST['status_sp_id'];
+				$where=array("sp_id"=>$sp_id);
+				
+				
+				$run=$this->select_where('serviceprovider',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				
+				if($status=="Block")
+				{
+					$arr=array("status"=>"Unblock");
+					$res=$this->update('serviceprovider',$arr,$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Unblock Success') 
+							window.location='manage_provider';
+							</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Block");
+					$res=$this->update('serviceprovider',$arr,$where);
+					if($res) 
+					{
+						
+						echo "<script> 
+							alert('Block Success') 
+							window.location='manage_provider';
+							</script>";
+					}
+				}
+			}
+			
   			default:
   				include_once('404.php');
   				break;

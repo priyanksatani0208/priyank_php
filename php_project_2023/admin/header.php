@@ -194,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
-		                <li><a href="profile.php.html"><i class="fa fa-user"></i>Edit profile.php</a></li>
+		                <li><a href="profile.php"><i class="fa fa-user"></i>Edit profile</a></li>
 		                <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
 		                <li><a href="calendar.html"><i class="fa fa-calendar"></i>Calender</a></li>
 		                <li><a href="inbox.html"><i class="fa fa-clipboard"></i>Tasks</a></li>

@@ -40,10 +40,11 @@
 
 				<form class="login100-form validate-form" method="post">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-						<span class="label-input100">Username</span>
+						<span class="label-input100">Name</span>
 						<input type="text" class="input100"  name="cust_name" placeholder="Enter username">
 						<span class="focus-input100"></span>
 					</div>
+					
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
 						<span class="label-input100">Email</span>
 						<input type="email" class="input100"  name="cust_email" placeholder="Enter Email">
@@ -53,6 +54,12 @@
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Mobile-Number is required">
 						<span class="label-input100">Mobile-Number</span>
 						<input type="number" class="input100"  name="cust_mob_num" placeholder="Enter Mobile-Number">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Address is required">
+						<span class="label-input100">Address</span>
+						<textarea name="address" class="input100" placeholder="Enter Address"></textarea>
 						<span class="focus-input100"></span>
 					</div>
 

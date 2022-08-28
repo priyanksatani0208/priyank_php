@@ -118,10 +118,11 @@ class control extends model
 				$cust_name=$_REQUEST['cust_name'];
 				$cust_email=$_REQUEST['cust_email'];
 				$cust_mob_num=$_REQUEST['cust_mob_num'];
+				$address=$_REQUEST['address'];
 				$password=$_REQUEST['password'];
                 $password=md5($password);				
 				
-				$arr=array("cust_name"=>$cust_name,"cust_email"=>$cust_email,"cust_mob_num"=>$cust_mob_num,"password"=>$password);
+				$arr=array("cust_name"=>$cust_name,"cust_email"=>$cust_email,"cust_mob_num"=>$cust_mob_num,"address"=>$address,"password"=>$password);
 				
 				$res=$this->insert('customer',$arr);
 				if($res)
@@ -154,7 +155,7 @@ class control extends model
 					if($res==1)           // 1 means true
 					{
 						
-						$_SESSION['email']=$sp_email;
+						$_SESSION['email']=$cust_email;
 						echo "<script> 
 							alert('Login Success') 
 							window.location='home';
@@ -176,6 +177,14 @@ class control extends model
 				window.location='home';
 				</script>";			
 			break;
+			
+			case '/myprofile';
+			$where=array("email"=>$_SESSION['email']);
+			$run=$this->select_where('customer',$where);
+			$fetch=$run->fetch_object();
+			include_once('myprofile.php');
+			break;
+			
 			default:
 				include_once('error.php');
 		}

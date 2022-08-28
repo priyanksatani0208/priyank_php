@@ -27,8 +27,8 @@ include_once('header.php');
 						<th>customer Name</th>
 						<th>Customer Mobile No</th>
 						<th>Customer Email</th>
-						<th>Edit</th>
-						<th>Delete</th>
+						<th>Customer Address</th>
+						
 					  </tr>
 					</thead>
 					<tbody>
@@ -41,8 +41,8 @@ include_once('header.php');
 						<td><?php echo $c->cust_name?></td>
 						<td><?php echo $c->cust_mob_num?></td>
 						<td><?php echo $c->cust_email?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_cust_id=<?php echo $c -> cust_id;?>" class="btn btn-danger">Delete</a></td>
+						<td><?php echo $c->address?></td>
+						
 					  </tr>
 					 <?php
                     }

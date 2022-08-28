@@ -70,6 +70,38 @@ class model
 		return $run;
 		
 	}
+	function update($tbl,$arr,$where)
+	{
+		$key_arr=array_keys($arr); // 
+		$value_arr=array_values($arr);
+		
+		$upd="update $tbl set "; // query continue
+		$i=0;
+		$count=count($arr);
+		foreach($arr as $w)
+		{
+			if($count == $i+1)
+			{
+				$upd.=" $key_arr[$i]='$value_arr[$i]'";
+			}
+			else
+			{
+				$upd.="$key_arr[$i]='$value_arr[$i]',";
+				$i++;
+			}
+		}
+		$wkey_arr=array_keys($where); // 
+		$wvalue_arr=array_values($where);
+		$upd.="where 1=1"; // query continue
+		$j=0;
+		foreach($where as $w)
+		{
+			$upd.=" and $wkey_arr[$j]='$wvalue_arr[$j]'";
+			$j++;
+		}
+		$run=$this->conn->query($upd);
+		return $run;
+	}
 	
 	
 	

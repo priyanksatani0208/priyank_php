@@ -1,3 +1,17 @@
+<?php
+
+if(isset($_SESSION['email']))
+{
+	
+}
+else	
+{
+	echo "<script>alert('login first');
+		window.location='home';
+		<script>";
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,44 +33,45 @@
 		<div class="agile_main_grid">
 			<div class="agile_main_grid_left">
 				<div class="agile_main_grid_left1">
-					<h2>Profile</h2>
+					<h2>My Profile</h2>
 				</div>
 				
 			</div>
 			<section class="slider">
-				<div>
+				<div class="flexslider">
 					<ul class="slides">
 						<li>
 							<div class="agile_main_grid_left_grid">
 								<div class="agile_main_grid_left2">
-									<img src="images/1.png" alt=" " />
-									<h3>Carl Rider <a href="mailto:info@example.com">@carldesigner.com</a></h3>
-									<p>UI / UX / PHP Developer</p>
+									<img src="images/p1.jpeg" alt=" " width="80px" height="80px" />
+									
+									<h6>Name :<?php echo $fetch->cust_name;?></h6>
 									<div class="agile_main_grid_left2_grid">
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Following</h4>
-											<h5>342</h5>
+											<h6>Address : </h6>
+											<h6><?php echo $fetch->address;?></h6>
+											
+										</div>
+										
+										<div class="agile_main_grid_left2_grid_left">
+											<h6>Contact No :</h6>
+											<h6><?php echo $fetch->cust_mob_num;?></h6>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Posts</h4>
-											<h5>231</h5>
-										</div>
-										<div class="agile_main_grid_left2_grid_left">
-											<h4>Followers</h4>
-											<h5>123</h5>
+											<h6>Email : </h6>
+											<h6><?php echo $fetch->cust_email;?></h6>
 										</div>
 										<div class="clear"> </div>
 									</div>
 									<div class="agile_main_grid_left2_grid_bottom">
-										<a href="#">Follow</a>
+										<a>Edit</a>
 									</div>
 								</div>
 							</div>
 						</li>
-						
 					</ul>
 				</div>
-				
+			</section>
 		</div>
 		
 	</div>

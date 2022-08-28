@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="dashboard.php">MSP</a></h1>         
+               <h1> <a class="navbar-brand" href="dashboard.php">Mobile services</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -195,9 +195,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
 		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
-		                <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
-		                <li><a href="calendar.html"><i class="fa fa-calendar"></i>Calender</a></li>
-		                <li><a href="inbox.html"><i class="fa fa-clipboard"></i>Tasks</a></li>
+		                
 		              </ul>
 		            </li>
 		           

@@ -1,3 +1,10 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -18,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="four">
 		<img src="images/404.png" alt="" />
 		<p><b> Sorry ,Page is not Found.</b></p>
-		<a href="dashboard" class="hvr-shutter-in-horizontal">Go To Home</a>
+		<a href="index.html" class="hvr-shutter-in-horizontal">Go To Home</a>
 	</div>
 		<!---->
 <?php
