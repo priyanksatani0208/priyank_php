@@ -43,9 +43,10 @@ else
 						<li>
 							<div class="agile_main_grid_left_grid">
 								<div class="agile_main_grid_left2">
-									<img src="images/p1.jpeg" alt=" " width="80px" height="80px" />
+									<img src="images/p1.jpeg" alt=" " width="90px" height="90px" />
 									
-									<h6>Name :<?php echo $fetch->cust_name;?></h6>
+								
+									<h3><?php echo $fetch->cust_name;?></h3>
 									<div class="agile_main_grid_left2_grid">
 										<div class="agile_main_grid_left2_grid_left">
 											<h6>Address : </h6>
@@ -64,7 +65,7 @@ else
 										<div class="clear"> </div>
 									</div>
 									<div class="agile_main_grid_left2_grid_bottom">
-										<a>Edit</a>
+										<a href="editmyprofile?edit_cust_id=<?php echo $fetch->cust_id;?>">Edit</a>
 									</div>
 								</div>
 							</div>

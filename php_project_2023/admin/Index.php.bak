@@ -32,7 +32,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 alert("please fill out the Email Id");
 			 return false;
 		 }
-		 
+		  var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+	    if(!mail.test(admin_email))
+	     {
+		  alert('Please fill proper email id'); 
+		  return false;   
+	     }
 		  
 		  
 		  var password=document.forms["myform"]["password"].value;

@@ -154,12 +154,23 @@ class control extends model
 					$res=$run->num_rows;   // check cond by rows
 					if($res==1)           // 1 means true
 					{
-						
-						$_SESSION['email']=$cust_email;
+						$data=$run->fetch_object();
+				     	$status=$data->status;
+						if($status=="Unblock")
+						{
+							$_SESSION['email']=$cust_email;
+							echo "<script> 
+								alert('Login Success') 
+								window.location='home';
+								</script>";
+						}
+						else
+				    	{
 						echo "<script> 
-							alert('Login Success') 
-							window.location='home';
+							alert('Login Failed due Blocked') 
+							window.location='login';
 							</script>";
+					    }
 						
 					}
 					else
@@ -173,16 +184,69 @@ class control extends model
 		   case '/logout':
 			unset($_SESSION['email']);
 			echo "<script> 
-				alert('Logout Success'); 
+				alert('Logout Success')
 				window.location='home';
 				</script>";			
 			break;
 			
-			case '/myprofile';
-			$where=array("email"=>$_SESSION['email']);
+			case '/myprofile':
+			$where=array("cust_email"=>$_SESSION['email']);
 			$run=$this->select_where('customer',$where);
 			$fetch=$run->fetch_object();
 			include_once('myprofile.php');
+			break;
+			
+			case '/editmyprofile';
+			if(isset($_REQUEST['edit_cust_id']))
+			{
+				$cust_id=$_REQUEST['edit_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$run=$this->select_where('customer',$where);
+				$fetch=$run->fetch_object();
+				$old_file=$fetch->file;
+				
+				if(isset($_REQUEST['submit']))
+				{
+					
+					$cust_name=$_REQUEST['cust_name'];
+					$cust_email=$_REQUEST['cust_email'];
+					$cust_mob_num=$_REQUEST['cust_mob_num'];
+					$address=$_REQUEST['address'];
+					
+					if($_FILES['file']['size']>0)
+					{
+						$file=$_FILES['file']['name'];  // get only input type="file"
+						$path='images'.$file;
+						$dup_file=$_FILES['file']['tmp_name'];// duplicate file get	
+						move_uploaded_file($dup_file,$path);
+						
+						$arr=array("cust_name"=>$cust_name,"cust_email"=>$cust_email,"cust_mob_num"=>$cust_mob_num,"address"=>$address,"file"=>$file);
+						$res=$this->update('customer',$arr,$where);
+						if($res)
+						{
+							unlink('images/'.$old_file);
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='myprofile';
+							</script>";
+						}
+					}
+					else
+					{
+						$arr=array("cust_name"=>$cust_name,"cust_email"=>$cust_email,"cust_mob_num"=>$cust_mob_num,"address"=>$address);
+						$res=$this->update('customer',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='myprofile';
+							</script>";
+						}
+					}
+				}
+				
+			}
+			include_once('editmyprofile.php');
 			break;
 			
 			default:

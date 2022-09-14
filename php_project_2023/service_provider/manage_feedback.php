@@ -19,7 +19,7 @@ include_once('header.php');
 				
 				<div class="container mt-3">
 				  <h2>Manage Feedback</h2>
-            <div class="table table-responsive">
+            <div>
 				  <table class="table">
 					<thead>
 					  <tr>
@@ -42,7 +42,7 @@ include_once('header.php');
 						<td><?php echo $c ->cust_name ;?> </td>
 						<td><?php echo $c ->cust_mob_num;?> </td>
 						<td><?php echo $c ->cust_email;?> </td>
-						<td><?php echo $c ->cust_message;?> </td>
+						<td><?php echo $c ->feedback_message;?> </td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_feedback_id=<?php echo $c->feedback_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>

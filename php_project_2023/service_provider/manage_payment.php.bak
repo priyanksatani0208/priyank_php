@@ -19,7 +19,7 @@ include_once('header.php');
 				
 				<div class="container mt-3">
 				  <h2>Manage payment</h2>
-				 <div>
+				 <div >
 				  <table class="table">
 					<thead>
 					  <tr>
