@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<title>Jquery selctor </title>
+		<script>
+		$(document).ready(function(){
+		  $("button").click(function(){
+		    $("p").toggle();
+			$(".c").toggle(5000);
+			$("#h").toggle('slow');
+		  })
+		})
+		</script>
+	</head>
+	<body>
+		<p>hello html ...!!!</p>
+		<p class="c">hello Jquery..!!!</p>
+		<h1 id="h">hello h1 Tag..!!! </h1>
+		
+		<button>Click me</button>
+	</body>
+</html>
