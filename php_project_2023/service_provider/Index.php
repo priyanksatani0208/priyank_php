@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="password" placeholder="Password"  name="password">
 					<i class="fa fa-lock"></i>
 				</div>
-			
+				  		
 			</div>
 			<div class="login-do">
 				<label class="hvr-shutter-in-horizontal login-sub">

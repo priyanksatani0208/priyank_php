@@ -14,6 +14,7 @@ class control extends model
 		switch($path)
 		{
 			case '/home':
+			$company_logo_arr=$this->selectall('company');	
 			if(isset($_REQUEST['submit']))
 			{
 				$contact_name=$_REQUEST['contact_name'];
@@ -39,6 +40,7 @@ class control extends model
 				break;
 				
 			case '/services':
+			$company_arr=$this->selectall('company');	
 			if(isset($_REQUEST['submit']))
 			{
 				$contact_name=$_REQUEST['contact_name'];
@@ -56,9 +58,7 @@ class control extends model
 				else
 				{
 					echo "";
-				}
-				
-				
+				}			
 			}
 				include_once('services.php');
 				break;
@@ -168,7 +168,7 @@ class control extends model
 					}
 					else
 					{
-						echo "Login Failed due wrong credebntial";
+						echo "<script>alert('Login Failed due wrong credebntial')</script>";
 					}
 				}
             include_once('login.php');
@@ -191,6 +191,31 @@ class control extends model
 			$fetch=$run->fetch_object();
 			include_once('myprofile.php');
 			break;
+
+			case '/feedback':
+				if(isset($_REQUEST['submit']))
+				{
+					$cust_name=$_REQUEST['cust_name'];
+					$cust_email=$_REQUEST['cust_email'];
+					$cust_mob_num=$_REQUEST['cust_mob_num'];
+				
+					$feedback_message=$_REQUEST['feedback_message'];
+					
+					$arr=array("cust_name"=>$cust_name,"cust_email"=>$cust_email,"cust_mob_num"=>$cust_mob_num,"feedback_message"=>$feedback_message);
+					
+					$res=$this->insert("feedback",$arr);
+					if($res)
+					{
+						echo "<script>alert('feedback sent....');</script>";
+						echo "<script>window.location='feedback'</script>";
+					}
+					else
+					{
+						echo "";
+					}
+				}
+				include_once('feedback.php');
+				break;
 			
 			case '/editmyprofile';
 			if(isset($_REQUEST['edit_cust_id']))

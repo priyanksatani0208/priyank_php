@@ -82,126 +82,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </header>
 
 
-<section class="services  py-lg-5 py-md-4 py-md-3 py-2" id="services">
-<!-- About Us -->
-<div class="services py-lg-5 py-md-4 py-md-3 py-2" id="services">
+<section class="bannerbottom py-lg-5 py-md-4 py-md-3 py-2">
 <div class="container">
-<h3 class="mb-lg-4 mb-md-3 mb-sm-2 mb-2">Services</h3>
+<h1 class="text-center pb-5 b-line" style="font-size: 1.575rem;padding-bottom: 1rem!important;"><b><u>Services</u></b> </h1>
 <p class="w3_dwn">Mobile services is the largest mobile phone service chain in Ahmedabad, also the biggest Mobile service provider..</p>
 <div class="w3_rm">
 <a href="about" >READ MORE</a>
 </div>
-<div class="w3l_abtdwn">
+</div><br><br><br>
+<div class="container">
 <div class="row">
-<div class="col-md-3 col-sm-12 w3l_r1">
-<i class="fa fa-crosshairs" aria-hidden="true"></i>
-<h4>Roofing</h4>
-<p class="agile_pgh">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+	<div class="col-md-12">
+<h1 class="text-center pb-5 b-line" style="font-size: 1.575rem;padding-bottom: 1rem!important;"><b><u>Mobile Repair</u></b> </h1>
+<h3 class="text-center pb-5 b-line" style="font-size: 1.575rem;padding-bottom: 1rem!important;">Please select the company of youre mobile</h3>
+<br>
 </div>
-<div class="col-md-3 col-sm-12 w3l_c1">
-<i class="fa fa-eye" aria-hidden="true"></i>
-<h4>Electrical</h4>
-<p class="agile_pgh">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </p>
-</div>
-<div class="col-md-3 col-sm-12 w3l_l1">
-<i class="fa fa-cog" aria-hidden="true"></i>
-<h4>Interior</h4>
-<p class="agile_pgh">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-</div>
-<div class="col-md-3 col-sm-12 w3l_l1">
-<i class="fa fa-cog" aria-hidden="true"></i>
-<h4>Plumbing</h4>
-<p class="agile_pgh">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-</div>
-</div>
+<?php
+  foreach($company_arr as $c)
+  {
+  ?>
+<div class="col-md-3 col-sm-6 w3_ban1">
+<div class="card" >
+  <div class="card-body">
+ 
+    <a href="#" class=""><img class="card-img-top" src="../admin/company_img/<?php echo $c ->com_img;?>" alt="Card image cap"></a><br>
+	<br>
+  <!-- service img name -->
+  <h6><b><?php echo $c ->com_name ;?></b></h6>
+  
+  </div>
 </div>
 
 </div>
+<?php
+   }
+  ?>
 
 </div>
-
-<div class="priceing-table w3l">
-	<div class="wrap">
-	<div class="w3_ads">
-		    <h1>Colorful Pricing Tables</h1>
-
-		<div class="priceing-table-main">
-			<div class="price-grid">
-	    		   <div class="price-block agile">
-		    			<div class="price-gd-top pric-clr1">
-		    				<h4>Basic</h4>
-		    				<h3>$5</h3>
-		    				<h5>1 month</h5>
-		    			</div>
-		    			<div class="price-gd-bottom">
-		    				<div class="price-list">
-			    				<ul>
-			    					<li>Full access</li>
-			    					<li>Documentation</li>
-			    					<li>Customers Support</li>
-			    					<li>Free Updates</li>
-			    					<li>Unlimited Services</li>
-			    				</ul>
-		    				</div>
-		    			</div>
-		    		    <div class="price-selet pric-sclr1">		    			   
-		    			   	  <a href="#">Book Now</a>
-		    			</div>
-		    		</div>
-	    		</div>
-	    		<div class="price-grid">
-	    			<div class="price-block agile">
-		    			<div class="price-gd-top pric-clr2">
-		    				<h4>Standard</h4>
-		    				<h3>$10</h3>
-		    				<h5>5 months</h5>
-		    			</div>
-		    			<div class="price-gd-bottom">
-		    				<div class="price-list">
-			    				<ul>
-			    					<li>Full access</li>
-			    					<li>Documentation</li>
-			    					<li>Customers Support</li>
-			    					<li>Free Updates</li>
-			    					<li>Unlimited Services</li>
-			    				</ul>
-		    				</div>
-		    			</div>
-		    		    <div class="price-selet pric-sclr2">
-		    			   	 <a  href="#">Book Now</a>
-		    			</div>
-		    		</div>
-	    		</div>
-	    		<div class="price-grid wthree">
-	    			<div class="price-block agile">
-		    			<div class="price-gd-top pric-clr3">
-		    				<h4>Premium</h4>
-		    				<h3>$20</h3>
-		    				<h5>Free for 2 months</h5>
-		    			</div>
-		    			<div class="price-gd-bottom">
-		    				<div class="price-list">
-			    				<ul>
-			    					<li>Full access</li>
-			    					<li>Documentation</li>
-			    					<li>Customers Support</li>
-			    					<li>Free Updates</li>
-			    					<li>Unlimited Services</li>
-			    				</ul>
-		    				</div>
-		    			</div>
-		    		    <div class="price-selet pric-sclr3">
-		    			   	<a  href="#">Book Now</a>
-		    			</div>
-		    		</div>
-    	       </div>
-             <div class="clearfix"> </div>
-		</div>
-	</div>
-	</div>
 </div>
-
-
 </section>
 
 

@@ -60,7 +60,7 @@ include_once('header.php');
 
 			<div class="profile-btn">
 
-                <button type="button" href="#" class="btn bg-red">Save changes</button>
+                <button type="button" href="" class="btn bg-red">Save changes</button>
            <div class="clearfix"></div>
 			</div>
 			 

@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_SESSION['email']))
 {
 	
@@ -127,13 +126,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
-        	  <section class="full-top">
-				<button id="toggle"><i class="fa fa-arrows-alt"></i></button>	
-			</section>
-			<form class=" navbar-left-right">
-              <input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
-              <input type="submit" value="" class="fa fa-search">
-            </form>
             <div class="clearfix"> </div>
            </div>
      
@@ -141,75 +133,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!-- Brand and toggle get grouped for better mobile display -->
 		 
 		   <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="drop-men" >
+		   <div class="drop-men" >
 		        <ul class=" nav_1">
-		           
-		    		<li class="dropdown at-drop">
-		              <a href="#" class="dropdown-toggle dropdown-at " data-toggle="dropdown"><i class="fa fa-globe"></i> <span class="number">5</span></a>
-		              <ul class="dropdown-menu menu1 " role="menu">
-		                <li><a href="#">
-		               
-		                	<div class="user-new">
-		                	<p>New user registered</p>
-		                	<span>40 seconds ago</span>
-		                	</div>
-		                	<div class="user-new-left">
-		                
-		                	<i class="fa fa-user-plus"></i>
-		                	</div>
-		                	<div class="clearfix"> </div>
-		                	</a></li>
-		                <li><a href="#">
-		                	<div class="user-new">
-		                	<p>Someone special liked this</p>
-		                	<span>3 minutes ago</span>
-		                	</div>
-		                	<div class="user-new-left">
-		                
-		                	<i class="fa fa-heart"></i>
-		                	</div>
-		                	<div class="clearfix"> </div>
-		                </a></li>
-		                <li><a href="#">
-		                	<div class="user-new">
-		                	<p>John cancelled the event</p>
-		                	<span>4 hours ago</span>
-		                	</div>
-		                	<div class="user-new-left">
-		                
-		                	<i class="fa fa-times"></i>
-		                	</div>
-		                	<div class="clearfix"> </div>
-		                </a></li>
-		                <li><a href="#">
-		                	<div class="user-new">
-		                	<p>The server is status is stable</p>
-		                	<span>yesterday at 08:30am</span>
-		                	</div>
-		                	<div class="user-new-left">
-		                
-		                	<i class="fa fa-info"></i>
-		                	</div>
-		                	<div class="clearfix"> </div>
-		                </a></li>
-		                <li><a href="#">
-		                	<div class="user-new">
-		                	<p>New comments waiting approval</p>
-		                	<span>Last Week</span>
-		                	</div>
-		                	<div class="user-new-left">
-		                
-		                	<i class="fa fa-rss"></i>
-		                	</div>
-		                	<div class="clearfix"> </div>
-		                </a></li>
-		                <li><a href="#" class="view">View all messages</a></li>
-		              </ul>
-		            </li>
 					<li class="dropdown">
-		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg" ></a>
+		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/w.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
-		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
+		            <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
 		                
 		              </ul>
 		            </li>
@@ -227,9 +156,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <a href="dashboard.php" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboard</span> </a>
                     </li>
+    
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Services</span><span class=""></span></a>
+                    <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Services</span><span class=""></span></a>
+
                         <ul class="nav nav-second-level">
                             <li><a href="serviceprovider" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Service Provider</a></li>
                             
@@ -237,6 +168,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					   </ul>
                     </li>
 					
+                    <li>
+                        <a href="add_company" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Company</a>
+                    </li>
+
+                    <li>
+                        <a href="add_model" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Model</a>
+                    </li>
+                        
+                    <li>
+                        <a href="add_service" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add service</a>
+                    </li>
+
+                    <li>
+                        <a href="manage_company" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Company</a>
+                    </li>
+                    
+                    <li>
+                        <a href="manage_model" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Model</a>
+                    </li>
+
+                    <li>
+                        <a href="manage_service" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage service</a>
+                    </li> 
+					  
 					<li>
                         <a href="view_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">View Customer</span> </a>
                     </li>
